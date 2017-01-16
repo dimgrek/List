@@ -1,25 +1,50 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using System;
+using System.Collections.ObjectModel;
+using List.Models;
+using MvvmCross.Core.ViewModels;
 
 namespace List.ViewModels
 {
     public class CardsListViewModel : MvxViewModel
     {
-        private string _hello;
+        private ObservableCollection<Ticket> _cardsList;
 
-        public string Hello
+
+        public CardsListViewModel()
         {
-            get { return _hello; }
-            set
+            CardsList = new ObservableCollection<Ticket>();
+            var ticketOne = new Ticket
             {
-                _hello = value;
-                RaisePropertyChanged(() => Hello);
+                Number = 1,
+                Priority = Priority.Low,
+                ProblemName = "some problem"
+            };
+
+            var ticketTwo = new Ticket
+            {
+                Number = 2,
+                Priority = Priority.Medium,
+                ProblemName = "another problem"
+            };
+            try
+            {
+                CardsList.Add(ticketOne);
+                CardsList.Add(ticketTwo);
+            }
+            catch (Exception e)
+            {
+                var x = e;
             }
         }
 
-        public override void Start()
+        public ObservableCollection<Ticket> CardsList
         {
-            base.Start();
-            Hello = "hello from vm";
+            get { return _cardsList; }
+            set
+            {
+                _cardsList = value;
+                RaisePropertyChanged(() => CardsList);
+            }
         }
     }
 }
