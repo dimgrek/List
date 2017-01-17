@@ -38,7 +38,7 @@
          <View
            android:layout_width="match_parent"
            android:layout_height="5dp"
-           android:background="#ff0000"
+           android:background="@color/Top"
            android:layout_marginLeft="5dp"
            android:layout_marginRight="5dp"
            local:MvxBind="Visible IsPriorityTop, Converter=BoolToVisibility"/>
@@ -56,7 +56,7 @@
           <View
            android:layout_width="match_parent"
            android:layout_height="5dp"
-           android:background="#f79416"
+           android:background="@color/Medium"
            android:layout_marginLeft="5dp"
            android:layout_marginRight="5dp"
            local:MvxBind="Visible IsPriorityMedium, Converter=BoolToVisibility"/>
@@ -74,7 +74,7 @@
            <View
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:background="#79c445"
+            android:background="@color/Low"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             local:MvxBind="Visible IsPriorityLow, Converter=BoolToVisibility"/>

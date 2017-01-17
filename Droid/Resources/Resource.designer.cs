@@ -793,32 +793,41 @@ namespace List.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0b003a
-			public const int abc_background_cache_hint_selector_material_dark = 2131427386;
+			// aapt resource value: 0x7f0b003c
+			public const int Low = 2131427388;
 			
 			// aapt resource value: 0x7f0b003b
-			public const int abc_background_cache_hint_selector_material_light = 2131427387;
+			public const int Medium = 2131427387;
 			
-			// aapt resource value: 0x7f0b003c
-			public const int abc_color_highlight_material = 2131427388;
+			// aapt resource value: 0x7f0b003a
+			public const int Top = 2131427386;
+			
+			// aapt resource value: 0x7f0b003d
+			public const int abc_background_cache_hint_selector_material_dark = 2131427389;
+			
+			// aapt resource value: 0x7f0b003e
+			public const int abc_background_cache_hint_selector_material_light = 2131427390;
+			
+			// aapt resource value: 0x7f0b003f
+			public const int abc_color_highlight_material = 2131427391;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int abc_input_method_navigation_guard = 2131427328;
 			
-			// aapt resource value: 0x7f0b003d
-			public const int abc_primary_text_disable_only_material_dark = 2131427389;
-			
-			// aapt resource value: 0x7f0b003e
-			public const int abc_primary_text_disable_only_material_light = 2131427390;
-			
-			// aapt resource value: 0x7f0b003f
-			public const int abc_primary_text_material_dark = 2131427391;
-			
 			// aapt resource value: 0x7f0b0040
-			public const int abc_primary_text_material_light = 2131427392;
+			public const int abc_primary_text_disable_only_material_dark = 2131427392;
 			
 			// aapt resource value: 0x7f0b0041
-			public const int abc_search_url_text = 2131427393;
+			public const int abc_primary_text_disable_only_material_light = 2131427393;
+			
+			// aapt resource value: 0x7f0b0042
+			public const int abc_primary_text_material_dark = 2131427394;
+			
+			// aapt resource value: 0x7f0b0043
+			public const int abc_primary_text_material_light = 2131427395;
+			
+			// aapt resource value: 0x7f0b0044
+			public const int abc_search_url_text = 2131427396;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int abc_search_url_text_normal = 2131427329;
@@ -829,11 +838,11 @@ namespace List.Droid
 			// aapt resource value: 0x7f0b0003
 			public const int abc_search_url_text_selected = 2131427331;
 			
-			// aapt resource value: 0x7f0b0042
-			public const int abc_secondary_text_material_dark = 2131427394;
+			// aapt resource value: 0x7f0b0045
+			public const int abc_secondary_text_material_dark = 2131427397;
 			
-			// aapt resource value: 0x7f0b0043
-			public const int abc_secondary_text_material_light = 2131427395;
+			// aapt resource value: 0x7f0b0046
+			public const int abc_secondary_text_material_light = 2131427398;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int accent_material_dark = 2131427332;
@@ -991,11 +1000,11 @@ namespace List.Droid
 			// aapt resource value: 0x7f0b0037
 			public const int switch_thumb_disabled_material_light = 2131427383;
 			
-			// aapt resource value: 0x7f0b0044
-			public const int switch_thumb_material_dark = 2131427396;
+			// aapt resource value: 0x7f0b0047
+			public const int switch_thumb_material_dark = 2131427399;
 			
-			// aapt resource value: 0x7f0b0045
-			public const int switch_thumb_material_light = 2131427397;
+			// aapt resource value: 0x7f0b0048
+			public const int switch_thumb_material_light = 2131427400;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int switch_thumb_normal_material_dark = 2131427384;

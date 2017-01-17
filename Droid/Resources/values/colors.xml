@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <color name="Top">#ff0000</color>
+  <color name="Medium">#f79416</color>
+  <color name="Low">#79c445</color>
+</resources>
