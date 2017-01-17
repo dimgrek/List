@@ -22,6 +22,7 @@ namespace List.Droid
         {
             base.FillValueConverters(registry);
             registry.AddOrOverwrite("BoolToVisibility", new BoolToVisibilityConverter());
+            registry.AddOrOverwrite("PriorityToColor", new PriorityToColorValueConverter());
         }
     }
 }
