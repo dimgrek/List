@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 using List.Models;
 using MvvmCross.Core.ViewModels;
 
@@ -37,6 +38,8 @@ namespace List.ViewModels
             }
         }
 
+        public ICommand AddCommand => new MvxCommand(Add);
+
         public ObservableCollection<Ticket> CardsList
         {
             get { return _cardsList; }
@@ -45,6 +48,11 @@ namespace List.ViewModels
                 _cardsList = value;
                 RaisePropertyChanged(() => CardsList);
             }
+        }
+
+        private void Add()
+        {
+            ShowViewModel<AddTicketViewModel>();
         }
     }
 }

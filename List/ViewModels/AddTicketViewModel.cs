@@ -40,10 +40,7 @@ namespace List.ViewModels
             get { return new MvxCommand(() => SetPriority(Priority.Low)); }
         }
 
-        public ICommand SaveCommand
-        {
-            get { return new MvxCommand(Save); }
-        }
+        public ICommand SaveCommand => new MvxCommand(Save);
 
         public string ProblemName
         {
@@ -104,6 +101,8 @@ namespace List.ViewModels
             };
             //working with DB:
             //db.Add(ticket);
+
+            //navigate back;
         }
 
         private void OnPriorityChanged(object sender, PriorityEventArgs args)
