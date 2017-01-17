@@ -22,9 +22,7 @@ namespace List.ViewModels
         {
             priortiyChanged += OnPriorityChanged;
 
-            SetPriority(Priority.Low);
-
-            ProblemName = "problem name";
+            SetPriority(Priority.Top);
         }
 
         public ICommand TopCommand
