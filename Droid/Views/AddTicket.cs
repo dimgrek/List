@@ -4,7 +4,7 @@ using MvvmCross.Droid.Views;
 
 namespace List.Droid.Views
 {
-    [Activity(Label = "Add Ticket", MainLauncher = true)]
+    [Activity(Label = "Add Ticket")]
     public class AddTicket : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
