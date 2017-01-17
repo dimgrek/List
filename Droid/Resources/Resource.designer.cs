@@ -1941,6 +1941,9 @@ namespace List.Droid
 			// aapt resource value: 0x7f040027
 			public const int support_simple_spinner_dropdown_item = 2130968615;
 			
+			// aapt resource value: 0x7f040028
+			public const int toolbar = 2130968616;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -2489,9 +2492,6 @@ namespace List.Droid
 			
 			// aapt resource value: 0x7f09013e
 			public const int MyTheme = 2131296574;
-			
-			// aapt resource value: 0x7f09013f
-			public const int MyTheme_Base = 2131296575;
 			
 			// aapt resource value: 0x7f090017
 			public const int Platform_AppCompat = 2131296279;
