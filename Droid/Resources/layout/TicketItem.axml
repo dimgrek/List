@@ -7,7 +7,7 @@
   <View
               android:layout_width="5dp"
               android:layout_height="match_parent"
-              android:layout_marginLeft="5dp"
+              android:layout_marginLeft="10dp"
               android:layout_marginRight="5dp"
               local:MvxBind="BackgroundColor Priority, Converter=PriorityToColor"/>
   <LinearLayout

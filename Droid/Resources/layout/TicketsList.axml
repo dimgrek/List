@@ -10,5 +10,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         local:MvxItemTemplate="@layout/ticketitem"
-        local:MvxBind="ItemsSource TicketsList" />
+        local:MvxBind="ItemsSource FilteredList" />
 </LinearLayout>
