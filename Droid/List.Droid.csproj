@@ -139,17 +139,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\AddTicket.cs" />
-    <Compile Include="Views\CardsList.cs" />
+    <Compile Include="Views\TicketsList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\CardsList.axml">
+    <AndroidResource Include="Resources\layout\TicketsList.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\CardItem.axml">
+    <AndroidResource Include="Resources\layout\TicketItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\AddTicket.axml">

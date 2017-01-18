@@ -6,29 +6,29 @@ using MvvmCross.Core.ViewModels;
 
 namespace List.ViewModels
 {
-    public class CardsListViewModel : MvxViewModel
+    public class TicketsListViewModel : MvxViewModel
     {
         private readonly IDataService _dataService;
-        private ObservableCollection<Ticket> _cardsList;
+        private ObservableCollection<Ticket> _ticketsList;
 
 
-        public CardsListViewModel(IDataService dataService)
+        public TicketsListViewModel(IDataService dataService)
         {
             _dataService = dataService;
-            CardsList = new ObservableCollection<Ticket>();
+            TicketsList = new ObservableCollection<Ticket>();
             foreach (var ticket in _dataService.Load())
-                CardsList.Add(ticket);
+                TicketsList.Add(ticket);
         }
 
         public ICommand AddCommand => new MvxCommand(AddTicket);
 
-        public ObservableCollection<Ticket> CardsList
+        public ObservableCollection<Ticket> TicketsList
         {
-            get { return _cardsList; }
+            get { return _ticketsList; }
             set
             {
-                _cardsList = value;
-                RaisePropertyChanged(() => CardsList);
+                _ticketsList = value;
+                RaisePropertyChanged(() => TicketsList);
             }
         }
 

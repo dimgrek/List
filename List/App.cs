@@ -13,7 +13,7 @@ namespace List
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-            Mvx.RegisterSingleton(new MvxAppStart<CardsListViewModel>());
+            Mvx.RegisterSingleton(new MvxAppStart<TicketsListViewModel>());
         }
     }
 }

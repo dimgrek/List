@@ -37,7 +37,7 @@
     <Compile Include="Services\DataService.cs" />
     <Compile Include="Services\IDataService.cs" />
     <Compile Include="ViewModels\AddTicketViewModel.cs" />
-    <Compile Include="ViewModels\CardsListViewModel.cs" />
+    <Compile Include="ViewModels\TicketsListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">

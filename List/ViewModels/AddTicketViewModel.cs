@@ -43,7 +43,7 @@ namespace List.ViewModels
             get { return new MvxCommand(() => SetPriority(Priority.Low)); }
         }
 
-        public ICommand SaveCommand => new MvxCommand(Save);
+        public ICommand SaveCommand => new MvxCommand(SaveAndNavigateBack);
 
         public string ProblemName
         {
@@ -95,27 +95,25 @@ namespace List.ViewModels
             }
         }
 
-        private void Save()
+        private void SaveAndNavigateBack()
         {
             var ticket = new Ticket
             {
                 Priority = ProblemPriority,
                 ProblemName = ProblemName
             };
-            //working with DB:
+
             _dataService.Save(ticket);
 
-            //navigate back;
-            ShowViewModel<CardsListViewModel>();
+            ShowViewModel<TicketsListViewModel>();
         }
 
         private void OnPriorityChanged(object sender, PriorityEventArgs args)
         {
-            var priority = args.Priority;
             IsPriorityTop = false;
             IsPriorityLow = false;
             IsPriorityMedium = false;
-            switch (priority)
+            switch (args.Priority)
             {
                 case Priority.Top:
                     IsPriorityTop = true;

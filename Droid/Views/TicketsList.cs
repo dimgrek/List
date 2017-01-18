@@ -5,12 +5,12 @@ using MvvmCross.Droid.Views;
 namespace List.Droid.Views
 {
     [Activity(Label = "List", MainLauncher = true)]
-    public class CardsList : MvxActivity
+    public class TicketsList : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.CardsList);
+            SetContentView(Resource.Layout.TicketsList);
         }
     }
 }
