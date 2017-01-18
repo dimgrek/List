@@ -8,7 +8,7 @@
   
   <Mvx.MvxListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         local:MvxItemTemplate="@layout/ticketitem"
         local:MvxBind="ItemsSource FilteredList" />
 </LinearLayout>
