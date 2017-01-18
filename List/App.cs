@@ -1,6 +1,7 @@
 ﻿using List.ViewModels;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
 
 namespace List
 {
@@ -8,6 +9,10 @@ namespace List
     {
         public App()
         {
+            CreatableTypes()
+                .EndingWith("Service")
+                .AsInterfaces()
+                .RegisterAsLazySingleton();
             Mvx.RegisterSingleton(new MvxAppStart<CardsListViewModel>());
         }
     }

@@ -1,44 +1,26 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using List.Models;
+using List.Services;
 using MvvmCross.Core.ViewModels;
 
 namespace List.ViewModels
 {
     public class CardsListViewModel : MvxViewModel
     {
+        private readonly IDataService _dataService;
         private ObservableCollection<Ticket> _cardsList;
 
 
-        public CardsListViewModel()
+        public CardsListViewModel(IDataService dataService)
         {
+            _dataService = dataService;
             CardsList = new ObservableCollection<Ticket>();
-            var ticketOne = new Ticket
-            {
-                Number = 1,
-                Priority = Priority.Low,
-                ProblemName = "some problem"
-            };
-
-            var ticketTwo = new Ticket
-            {
-                Number = 2,
-                Priority = Priority.Medium,
-                ProblemName = "another problem"
-            };
-            try
-            {
-                CardsList.Add(ticketOne);
-                CardsList.Add(ticketTwo);
-            }
-            catch (Exception e)
-            {
-                var x = e;
-            }
+            foreach (var ticket in _dataService.Load())
+                CardsList.Add(ticket);
         }
 
-        public ICommand AddCommand => new MvxCommand(Add);
+        public ICommand AddCommand => new MvxCommand(AddTicket);
 
         public ObservableCollection<Ticket> CardsList
         {
@@ -50,7 +32,7 @@ namespace List.ViewModels
             }
         }
 
-        private void Add()
+        private void AddTicket()
         {
             ShowViewModel<AddTicketViewModel>();
         }

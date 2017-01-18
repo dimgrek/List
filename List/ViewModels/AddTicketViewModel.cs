@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Windows.Input;
 using List.Models;
+using List.Services;
 using MvvmCross.Core.ViewModels;
 
 namespace List.ViewModels
 {
     internal class AddTicketViewModel : MvxViewModel
     {
+        private readonly IDataService _dataService;
         private readonly EventHandler<PriorityEventArgs> priortiyChanged;
         private bool _isPriorityLow;
 
@@ -18,8 +20,9 @@ namespace List.ViewModels
 
         private Priority _problemPriority;
 
-        public AddTicketViewModel()
+        public AddTicketViewModel(IDataService dataService)
         {
+            _dataService = dataService;
             priortiyChanged += OnPriorityChanged;
 
             SetPriority(Priority.Top);
@@ -100,9 +103,10 @@ namespace List.ViewModels
                 ProblemName = ProblemName
             };
             //working with DB:
-            //db.Add(ticket);
+            _dataService.Save(ticket);
 
             //navigate back;
+            ShowViewModel<CardsListViewModel>();
         }
 
         private void OnPriorityChanged(object sender, PriorityEventArgs args)

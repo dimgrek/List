@@ -47,6 +47,8 @@ namespace List.Droid
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::List.Droid.Resource.Styleable.MvxListView;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::List.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::List.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::MvvmCross.Plugins.Sqlite.Droid.Resource.String.ApplicationName = global::List.Droid.Resource.String.ApplicationName;
+			global::MvvmCross.Plugins.Sqlite.Droid.Resource.String.Hello = global::List.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Animation
@@ -1982,6 +1984,12 @@ namespace List.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f060015
+			public const int ApplicationName = 2131099669;
+			
+			// aapt resource value: 0x7f060014
+			public const int Hello = 2131099668;
+			
 			// aapt resource value: 0x7f060000
 			public const int abc_action_bar_home_description = 2131099648;
 			
@@ -2039,11 +2047,11 @@ namespace List.Droid
 			// aapt resource value: 0x7f060012
 			public const int abc_toolbar_collapse_description = 2131099666;
 			
-			// aapt resource value: 0x7f060015
-			public const int app_name = 2131099669;
+			// aapt resource value: 0x7f060017
+			public const int app_name = 2131099671;
 			
-			// aapt resource value: 0x7f060014
-			public const int hello = 2131099668;
+			// aapt resource value: 0x7f060016
+			public const int hello = 2131099670;
 			
 			// aapt resource value: 0x7f060013
 			public const int status_bar_notification_info_overflow = 2131099667;
