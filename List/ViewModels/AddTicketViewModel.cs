@@ -6,7 +6,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace List.ViewModels
 {
-    internal class AddTicketViewModel : MvxViewModel
+    public class AddTicketViewModel : MvxViewModel
     {
         private readonly IDataService _dataService;
         private readonly EventHandler<PriorityEventArgs> priortiyChanged;
