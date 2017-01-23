@@ -105,7 +105,7 @@ namespace List.ViewModels
 
             _dataService.Save(ticket);
 
-            ShowViewModel<TicketsListViewModel>();
+			Close(this);
         }
 
         private void OnPriorityChanged(object sender, PriorityEventArgs args)
