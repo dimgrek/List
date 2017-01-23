@@ -27,7 +27,7 @@ namespace List.Services
 
 
             filteredList.Clear();
-            var matches = ticketList.Where(t => t.ProblemName.ToLower().Contains(search));
+			var matches = ticketList.Where(t => t.ProblemName.ToLower().Contains(search.ToLower())).ToList();
 
             foreach (var ticket in matches)
                 filteredList.Add(ticket);

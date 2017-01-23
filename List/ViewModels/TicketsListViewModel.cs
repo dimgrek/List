@@ -4,6 +4,7 @@ using System.Windows.Input;
 using List.Models;
 using List.Services;
 using MvvmCross.Core.ViewModels;
+using System.Linq;
 
 namespace List.ViewModels
 {
@@ -12,15 +13,17 @@ namespace List.ViewModels
         private readonly IDataService _dataService;
         private readonly IFilterService _filterService;
         private ObservableCollection<Ticket> _filteredList;
-        private string _search;
+		private List<Ticket> _ticketsList { get; }
+		IEnumerable<Ticket> _list;
+		private string _search;
 
         public TicketsListViewModel(IDataService dataService, IFilterService filterService)
         {
             _dataService = dataService;
             _filterService = filterService;
-            var list = _dataService.Load();
-            FilteredList = new ObservableCollection<Ticket>(list);
-            TicketsList = new List<Ticket>(list);
+			LoadTickets();
+            FilteredList = new ObservableCollection<Ticket>(_list);
+            _ticketsList = new List<Ticket>(_list);
         }
 
         public string Search
@@ -36,7 +39,7 @@ namespace List.ViewModels
 
         public ICommand AddCommand => new MvxCommand(NavigateToAddTicket);
 
-        private List<Ticket> TicketsList { get; }
+		public ICommand RefreshTicketsCommand => new MvxCommand(RefreshList);
 
         public ObservableCollection<Ticket> FilteredList
         {
@@ -50,12 +53,30 @@ namespace List.ViewModels
 
         private void FilterList()
         {
-            FilteredList = _filterService.Filter(TicketsList, Search);
+            FilteredList = _filterService.Filter(_ticketsList, Search);
         }
+
+		private void LoadTickets()
+		{
+			_list = _dataService.Load();
+		}
+
+		private void RefreshList()
+		{
+			FilteredList.Clear();
+			_ticketsList.Clear();
+			LoadTickets();
+			foreach (var ticket in _list)
+			{
+				FilteredList.Add(ticket);
+				_ticketsList.Add(ticket);
+			}
+		}
 
         private void NavigateToAddTicket()
         {
             ShowViewModel<AddTicketViewModel>();
         }
+
     }
 }
