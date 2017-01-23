@@ -1,4 +1,5 @@
-﻿using List.Models;
+﻿using System.Linq;
+using List.Models;
 using List.Services;
 using List.ViewModels;
 using Moq;
@@ -23,7 +24,7 @@ namespace List.Tests.ViewModels
         public void SaveCommand_Executed_TicketSaved()
         {
             //Arrange
-Te
+
             //Act
             _vm.SaveCommand.Execute(null);
 
