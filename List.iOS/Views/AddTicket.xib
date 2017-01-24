@@ -63,7 +63,7 @@
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzn-5Z-6Xi">
                                     <rect key="frame" x="21" y="30" width="76" height="5"/>
-                                    <color key="backgroundColor" red="1" green="0.089263750714253187" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="EaO-49-jCE"/>
                                     </constraints>
@@ -82,7 +82,7 @@
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jz4-o7-N4k">
                                     <rect key="frame" x="20.5" y="30" width="77" height="5"/>
-                                    <color key="backgroundColor" red="0.85171885378136114" green="1" blue="0.19258917180563062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.96862745098039216" green="0.58039215686274503" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="gyt-k9-vnM"/>
                                     </constraints>
@@ -102,7 +102,7 @@
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17h-Rc-k1f">
                                     <rect key="frame" x="21" y="30" width="77" height="5"/>
-                                    <color key="backgroundColor" red="0.07945281127986048" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.47450980392156861" green="0.76862745098039209" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="2IK-1v-f5p"/>
                                     </constraints>
